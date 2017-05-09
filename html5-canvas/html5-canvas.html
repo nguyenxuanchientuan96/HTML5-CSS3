@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>HTML5 canvas</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<header>
+		HTML5 canvas
+	</header>
+	<nav> 
+		<ul> 
+			<li> <a href="#"> Công nghệ </a> </li>
+			<li> <a href="#"> Thể thao </a> </li>
+			<li> <a href="#"> Giải trí </a> </li>
+			<li> <a href="#"> Sport </a> </li>
+			<li> <a href="#"> About us </a> </li>
+		</ul>
+	</nav>
+	<section>
+		<article>
+			<p> Canvas là một thẻ HTML5 tương tự như những thẻ HTML khác, tuy nhiên có một sự khác biệt rõ rệt nhât là nội dung của Canvas lại được xây dựng từ Javascript. Để sử dụng Canvas thì bạn phải đặt thẻ canvas tại vị trí muốn hiển thị, sau đó sử dụng các API mà HTML5 cung cấp dùng để thao tác với các đối tượng bên trong Canvas (line, circle, ...).
+
+			Khi sử dụng Canvas bạn phải hiểu được sự khác biệt giữa các phần tử của Canvas và nội dung của nó. Phần tử Canvas chỉ là một thẻ HTML thông thường nhung nội dung của nó là một tập hợp các đối tượng tạo nên một Graphic.
+
+			Lúc hiển thị lên trình duyệt thì Canvas sẽ hiển thị ở dạng hình ảnh png. </p>
+		</article>
+		<article>
+			<canvas id="testcanvas" width="500px" height="300px"></canvas>
+			<script>
+				//lay thẻ canvas
+				var canvas= document.getElementById("testcanvas");
+				//vẽ mô hình 2D
+				var context=canvas.getContext('2d');
+				//thiết lập font chữ màu chữ
+				context.font='40px Calibri';
+				context.fillStyle='blue';
+				//vẽ một đoạn text tại vị trí 150px 100px
+				context.fillText('Hello World',150,100); //ngang 150 doc 100
+			</script>
+		</article>
+		<article>
+			<header>
+				<p> 2 đầu đoạn thẳng vuông góc </p>
+			</header>
+			<canvas id="myCanvas" width="900" height="500"></canvas>
+			<script>
+				var canvas = document.getElementById('myCanvas1');
+				var context = canvas.getContext('2d');
+				 
+				// Tiến hành vẽ
+				context.beginPath();        // Khai báo vẽ đường thẳng mới
+				context.moveTo(10, 10);     // Điểm bắt đầu
+				context.lineTo(190, 10);    // Điểm kết thúc
+				context.lineWidth = 15;     // rộng 15px
+				context.strokeStyle = 'blue';// Màu xanh
+				context.lineCap = 'butt'; //vuông góc 2 đâu
+				context.stroke();           // Tiến hành vẽ
+			</script>
+		</article>
+
+		<article>
+			<header>
+				<p> 2 đầu đoạn thẳng vuông góc </p>
+			</header>
+			<canvas id="myCanvas" width="900" height="500"></canvas>
+			<script>
+				var canvas = document.getElementById('myCanvas1');
+				var context = canvas.getContext('2d');
+				 
+				// Tiến hành vẽ
+				context.beginPath();        // Khai báo vẽ đường thẳng mới
+				context.moveTo(10, 10);     // Điểm bắt đầu
+				context.lineTo(190, 10);    // Điểm kết thúc
+				context.lineWidth = 15;     // rộng 15px
+				context.strokeStyle = 'blue';// Màu xanh
+				context.lineCap = 'butt'; //vuông góc 2 đâu
+				context.stroke();           // Tiến hành vẽ
+			</script>
+		</article>
+		
+	</section>
+	<aside>
+		html5 canvas
+	</aside>
+	<footer>
+		&copy copy-right by Chien Tuan
+	</footer>
+
+</body>
+</html>

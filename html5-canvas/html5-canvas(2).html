@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8"/>
+	<title> HTML 5 canvas bài 2 - Vẽ đường thẳng</title>
+</head>
+<body>
+	<header>
+	</header> <!-- header -->
+	<nav>
+	</nav> <!-- nav -->
+	<section>
+		<article>
+			<header>
+				<hgroup>
+					<h1>Vẽ một đường thẳng</h1>
+					<h2> Trong canvas </h2>
+				</hgroup>
+			</header>
+			<canvas id="myCanvas" width="500" height="200"></canvas>
+			<script>
+				//goi canvas ra
+				var canvas=document.getElementById('myCanvas');
+				//chọn đối tượng vẽ 2D
+				var context=canvas.getContext('2d');
+				//ve
+				context.beginPath(); //khai báo vẽ đường thẳng mới
+				context.moveTo(10,10); //điểm bắt đầu
+				context.lineTo(500,100);//điểm kết thúc ngang dọc
+				context.lineWidth=10; //rộng 15px
+				context.strokeStyle='blue'; //màu
+				context.stroke(); //vẽ
+			</script>
+		</article>
+		
+		<article>
+			<header>
+				<h1> Vuông góc 2 đầu </h1> 
+			</header>
+			<canvas id="myCanvas1" width="500" height="200"></canvas>
+			<script>
+				//goi canvas ra
+				var canvas=document.getElementById('myCanvas1');
+				//chọn đối tượng vẽ 2D
+				var context=canvas.getContext('2d');
+				//ve
+				context.beginPath(); //khai báo vẽ đường thẳng mới
+				context.moveTo(10,10); //điểm bắt đầu
+				context.lineTo(500,100);//điểm kết thúc ngang dọc
+				context.lineWidth=10; //rộng 15px
+
+				context.strokeStyle='blue'; //màu
+				context.lineCap = 'butt';
+				context.stroke(); //vẽ
+			</script>
+		</article>
+
+		<article>
+			<header>
+				<h1> Tròn 2 đầu </h1> 
+			</header>
+			<canvas id="myCanvas2" width="500" height="200"></canvas>
+			<script>
+				//goi canvas ra
+				var canvas=document.getElementById('myCanvas2');
+				//chọn đối tượng vẽ 2D
+				var context=canvas.getContext('2d');
+				//ve
+				context.beginPath();        // Khai báo vẽ đường thẳng mới
+				context.moveTo(10, 10);     // Điểm bắt đầu
+				context.lineTo(400, 10);    // Điểm kết thúc
+				context.lineWidth = 15;     // rộng 15px
+				context.strokeStyle = 'pink';// Màu hồng
+				context.lineCap = 'round';
+				context.stroke();           // Tiến hành vẽ
+ 
+			</script>
+		</article>
+
+		<article>
+			<header>
+				<h1> square : bo hình chữ nhật, dài hơn bình thường do hai đầu bổ sung đoạn hình chữ nhật. </h1> 
+			</header>
+			<canvas id="myCanvas3" width="500" height="200"></canvas>
+			<script>
+				//goi canvas ra
+				var canvas=document.getElementById('myCanvas3');
+				//chọn đối tượng vẽ 2D
+				var context=canvas.getContext('2d');
+				//ve
+				context.beginPath();        // Khai báo vẽ đường thẳng mới
+				context.moveTo(10, 10);     // Điểm bắt đầu
+				context.lineTo(190, 10);    // Điểm kết thúc
+				context.lineWidth = 15;     // rộng 15px
+				context.strokeStyle = 'red';// Màu đỏ
+				context.lineCap = 'square';
+				context.stroke(); 
+			</script>
+		</article>
+	</section><!--  section -->
+	<aside>
+		
+	</aside> <!-- aside -->
+	<footer>
+		
+	</footer> <!-- footer -->
+
+</body>
+</html>
